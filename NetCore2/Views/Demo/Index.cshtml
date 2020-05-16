@@ -1,0 +1,16 @@
+﻿@model NetCore2.Models.Product
+@{
+    ViewData["Title"] = "Index";
+    var Model = new Product();
+    Model.Code = 1;
+    Model.ProductName = "Honda";
+    Model.Invoid = 35000;
+    Model.Discount = 0.1;
+
+
+}
+<div>@Model.Code - @Model.ProductName - @Model.Invoid - @Model.Discount</div>
+@*host/Demo<br/>
+host/Demo/Index<br/>*@
+<h1>Index</h1>
+

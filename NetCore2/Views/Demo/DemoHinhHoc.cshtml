@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "DemoHinhHoc";
+    HinhChuNhat hcn = new HinhChuNhat();
+    hcn.Dai = 5;
+    hcn.Rong = 10;
+    hcn.TinhDienTichChuVi();
+
+    HinhTron ht = new HinhTron();
+    ht.BanKinh = 5;
+    ht.DuongKinh = 10;
+    ht.TinhDienTichChuVi();
+
+
+    List<HinhHoc> dsHinh = new List<HinhHoc>();
+    dsHinh.Add(new HinhTron { BanKinh = 11.1 });
+    dsHinh.Add(new HinhChuNhat { Dai = 5, Rong= 10 });
+}
+<h2>Lucky Number: @HinhHoc.RandomKey()</h2>
+<div>@hcn.ToString()</div>
+<div>@ht.ToString()</div>
+@foreach(var hh in dsHinh)
+{
+    hh.TinhDienTichChuVi();
+    <div>@hh.ToString()</div>
+  
+}
+<h1>DemoHinhHoc</h1>
+
